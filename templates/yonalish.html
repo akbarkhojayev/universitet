@@ -1,0 +1,15 @@
+<h1> Yonalishlar royhati </h1>
+<hr>
+<a href="/">Bosh sahifa</a>
+
+{% for yonalish in yonalishlar %}
+<p>
+    {{ forloop.counter }}.
+    <a href="/yonalishlar/{{ yonalish.id }}/">
+        {{yonalish.nom}}
+    </a>
+    <a href="/yonalishlar/{{ yonalish.id }}/delete/">
+        <button>O'chirish</button>
+    </a>
+</p>
+{% endfor %}

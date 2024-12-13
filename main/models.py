@@ -29,4 +29,3 @@ class Ustoz(models.Model):
         return self.ism
     class Meta:
         verbose_name_plural = 'Ustozlar'
-

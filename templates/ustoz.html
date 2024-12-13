@@ -1,0 +1,23 @@
+<h1> Ustozlar royhati </h1>
+<form>
+    <input type="text" name="qsoz1" placeholder="Ustozning ismin kiriting.."
+    {% if qsoz %} value="{{qsoz1}}" {% endif %}
+    >
+    <button>Qidirish</button>
+</form>
+<hr>
+<a href="/">Bosh sahifa</a>
+
+
+{% for ustoz in ustozlar %}
+
+<p>
+    {{ forloop.counter }}.
+    <a href="/ustozlar/{{ ustoz.id }}/">
+        {{ustoz.ism}}
+    </a>
+    <a href="/ustozlar/{{ ustoz.id }}/delete/">
+        <button>O'chirish</button>
+    </a>
+</p>
+{% endfor %}

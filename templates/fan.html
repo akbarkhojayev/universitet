@@ -1,0 +1,17 @@
+<h1> Fanlar royhati </h1>
+<hr>
+<a href="/">Bosh sahifa</a>
+
+
+{% for fan in fanlar %}
+
+<p>
+    {{ forloop.counter }}.
+    <a href="/fanlar/{{ fan.id }}/">
+        {{fan.nom}}
+    </a>
+    <a href="/fanlar/{{ fan.id }}/delete/">
+        <button>O'chirish</button>
+    </a>
+</p>
+{% endfor %}
